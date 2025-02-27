@@ -1,0 +1,17 @@
+services:
+  infra:
+    container_name: infra
+    build:
+      context: .
+      dockerfile: ./deploy/docker/Dockerfile.dev
+    restart: "no"
+    networks:
+      - infra-network
+    volumes:
+      - ${HOME}/.config/gh:/home/vscode/.config/gh
+      - ${HOME}/.ssh:/home/vscode/.ssh
+      - ${HOME}/.zhistory:/home/vscode/.zhistory
+# Networks to be created to facilitate communication between containers
+networks:
+  infra-network:
+    driver: bridge

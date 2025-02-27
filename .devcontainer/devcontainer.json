@@ -1,0 +1,14 @@
+{
+    "name": "infra",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "infra",
+    "workspaceFolder": "/app",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "oderwat.indent-rainbow",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    }
+}
