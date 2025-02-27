@@ -5,6 +5,7 @@ services:
       context: .
       dockerfile: ./deploy/docker/Dockerfile.dev
     restart: "no"
+    env_file: .env
     networks:
       - infra-network
     volumes:
